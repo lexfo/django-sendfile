@@ -1,4 +1,4 @@
-VERSION = (0, 3, 11)
+VERSION = (0, 3, 11, 'post1')
 __version__ = '.'.join(map(str, VERSION))
 
 import os.path
