@@ -1,3 +1,4 @@
+dist: trusty
 sudo: false
 language: python
 cache: true
@@ -58,4 +59,4 @@ matrix:
 install:
   - pip install tox
 script:
-  - tox -e py${TRAVIS_PYTHON_VERSION//.}-${DJANGO}
+  - tox -vvv -e py${TRAVIS_PYTHON_VERSION//.}-${DJANGO}
