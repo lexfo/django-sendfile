@@ -12,46 +12,58 @@ python:
 matrix:
   include:
     - python: '2.6'
-      env:
-        - DJANGO=django14
-        - DJANGO=django15
-        - DJANGO=django16
+      env: DJANGO=django14
+    - python: '2.6'
+      env: DJANGO=django15
+    - python: '2.6'
+      env: DJANGO=django16
     - python: '2.7'
-      env:
-        - DJANGO=django14
-        - DJANGO=django15
-        - DJANGO=django16
-        - DJANGO=django17
-        - DJANGO=django18
-        - DJANGO=django19
-        - DJANGO=django110
-        - DJANGO=django111
+      env: DJANGO=django14
+    - python: '2.7'
+      env: DJANGO=django15
+    - python: '2.7'
+      env: DJANGO=django16
+    - python: '2.7'
+      env: DJANGO=django17
+    - python: '2.7'
+      env: DJANGO=django18
+    - python: '2.7'
+      env: DJANGO=django19
+    - python: '2.7'
+      env: DJANGO=django110
+    - python: '2.7'
+      env: DJANGO=django111
     - python: '3.2'
-      env:
-        - DJANGO=django15
-        - DJANGO=django16
-        - DJANGO=django17
-        - DJANGO=django18
+      env: DJANGO=django15
+    - python: '3.2'
+      env: DJANGO=django16
+    - python: '3.2'
+      env: DJANGO=django17
+    - python: '3.2'
+      env: DJANGO=django18
     - python: '3.3'
-      env:
-        - DJANGO=django15
-        - DJANGO=django16
-        - DJANGO=django17
-        - DJANGO=django18
+      env: DJANGO=django15
+    - python: '3.3'
+      env: DJANGO=django16
+    - python: '3.3'
+      env: DJANGO=django17
+    - python: '3.3'
+      env: DJANGO=django18
     - python: '3.4'
-      env:
-        - DJANGO=django19
-        - DJANGO=django110
-        - DJANGO=django111
+      env: DJANGO=django19
+    - python: '3.4'
+      env: DJANGO=django110
+    - python: '3.4'
+      env: DJANGO=django111
     - python: '3.5'
-      env:
-        - DJANGO=django19
-        - DJANGO=django110
-        - DJANGO=django111
+      env: DJANGO=django19
+    - python: '3.5'
+      env: DJANGO=django110
+    - python: '3.5'
+      env: DJANGO=django111
     - python: '2.7'
-      env:
-        - DJANGO=django111
+      env: DJANGO=django111
 install:
   - pip install tox
 script:
-  - tox -e ${TOXENV}
+  - tox -e py${TRAVIS_PYTHON_VERSION//.}-${DJANGO}
