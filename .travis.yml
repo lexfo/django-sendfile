@@ -54,8 +54,6 @@ matrix:
       env: DJANGO=django110
     - python: '3.5'
       env: DJANGO=django111
-    - python: '2.7'
-      env: DJANGO=django111
 install:
   - pip install tox
 script:
