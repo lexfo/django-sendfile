@@ -4,20 +4,6 @@ language: python
 cache: true
 matrix:
   include:
-    - python: '2.6'
-      env: DJANGO=django14
-    - python: '2.6'
-      env: DJANGO=django15
-    - python: '2.6'
-      env: DJANGO=django16
-    - python: '2.7'
-      env: DJANGO=django14
-    - python: '2.7'
-      env: DJANGO=django15
-    - python: '2.7'
-      env: DJANGO=django16
-    - python: '2.7'
-      env: DJANGO=django17
     - python: '2.7'
       env: DJANGO=django18
     - python: '2.7'
@@ -27,19 +13,7 @@ matrix:
     - python: '2.7'
       env: DJANGO=django111
     - python: '3.2'
-      env: DJANGO=django15
-    - python: '3.2'
-      env: DJANGO=django16
-    - python: '3.2'
-      env: DJANGO=django17
-    - python: '3.2'
       env: DJANGO=django18
-    - python: '3.3'
-      env: DJANGO=django15
-    - python: '3.3'
-      env: DJANGO=django16
-    - python: '3.3'
-      env: DJANGO=django17
     - python: '3.3'
       env: DJANGO=django18
     - python: '3.4'
@@ -57,4 +31,5 @@ matrix:
 install:
   - pip install tox
 script:
+  - echo "Starting tests"
   - tox -vvv -e py${TRAVIS_PYTHON_VERSION//.}-${DJANGO}
